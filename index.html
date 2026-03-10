@@ -488,7 +488,7 @@ footer { background:var(--ink); color:var(--white); padding:3rem 0 0; }
     </div>
     <div class="topbar-right">
       <span class="tb-item"><a href="tel:+22901464211195">+229 01 46 42 11 95</a></span>
-      <span class="tb-item"><a href="mailto:voixdesnormaliens@gmail.com">voixdesnormaliens@gmail.com</a></span>
+      <span class="tb-item"><a href="/cdn-cgi/l/email-protection#96e0f9ffeef2f3e5f8f9e4fbf7fafff3f8e5d6f1fbf7fffab8f5f9fb"><span class="__cf_email__" data-cfemail="61170e08190504120f0e130c000d08040f1221060c00080d4f020e0c">[email&#160;protected]</span></a></span>
       <span class="tb-badge">N°1 Presse UNSTIM</span>
     </div>
   </div>
@@ -622,9 +622,9 @@ footer { background:var(--ink); color:var(--white); padding:3rem 0 0; }
           <div class="soc-icon"><span>WA</span></div>
           <div class="soc-details"><div class="soc-name">WhatsApp Channel</div><span class="soc-val">Canal VDN</span></div><span>→</span>
         </a>
-        <a href="mailto:voixdesnormaliens@gmail.com" class="soc-btn em">
+        <a href="/cdn-cgi/l/email-protection#25534a4c5d4140564b4a574844494c404b56654248444c490b464a48" class="soc-btn em">
           <div class="soc-icon"><span>ML</span></div>
-          <div class="soc-details"><div class="soc-name">Gmail</div><span class="soc-val">voixdesnormaliens@gmail.com</span></div><span>→</span>
+          <div class="soc-details"><div class="soc-name">Gmail</div><span class="soc-val"><span class="__cf_email__" data-cfemail="35435a5c4d5150465b5a475854595c505b46755258545c591b565a58">[email&#160;protected]</span></span></div><span>→</span>
         </a>
         <a href="tel:+22901464211195" class="soc-btn ph">
           <div class="soc-icon"><span>TL</span></div>
@@ -692,7 +692,7 @@ footer { background:var(--ink); color:var(--white); padding:3rem 0 0; }
       <p>Passionné(e) de journalisme, de communication ou de culture ? Rejoins la meilleure presse universitaire de l'UNSTIM.</p>
       <div class="join-btns">
         <a href="https://www.facebook.com/voixdesnormaliens" target="_blank" class="join-btn white">Postuler via Facebook</a>
-        <a href="mailto:voixdesnormaliens@gmail.com" class="join-btn ghost">voixdesnormaliens@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#b6c0d9dfced2d3c5d8d9c4dbd7dadfd3d8c5f6d1dbd7dfda98d5d9db" class="join-btn ghost"><span class="__cf_email__" data-cfemail="95e3fafcedf1f0e6fbfae7f8f4f9fcf0fbe6d5f2f8f4fcf9bbf6faf8">[email&#160;protected]</span></a>
       </div>
     </div>
   </div>
@@ -707,7 +707,7 @@ footer { background:var(--ink); color:var(--white); padding:3rem 0 0; }
       <p class="ft-about">Groupe de presse et journalisme universitaire de l'ENSET et de l'UNSTIM. Depuis 2010, nous informons, formons et inspirons la communauté universitaire de Lokossa.</p>
       <div class="ft-contacts">
         Tél. : <a href="tel:+22901464211195">+229 01 46 42 11 95</a><br>
-        Email : <a href="mailto:voixdesnormaliens@gmail.com">voixdesnormaliens@gmail.com</a><br>
+        Email : <a href="/cdn-cgi/l/email-protection#295f4640514d4c5a47465b444845404c475a694e44484045074a4644"><span class="__cf_email__" data-cfemail="3a4c5553425e5f49545548575b56535f54497a5d575b535614595557">[email&#160;protected]</span></a><br>
         Campus Universitaire de Lokossa, Bénin<br>
         <a href="https://www.facebook.com/voixdesnormaliens" target="_blank">facebook.com/voixdesnormaliens</a>
       </div>
@@ -729,7 +729,7 @@ footer { background:var(--ink); color:var(--white); padding:3rem 0 0; }
       <h5>Contact</h5>
       <a href="https://www.facebook.com/voixdesnormaliens" target="_blank">Page Facebook</a>
       <a href="https://whatsapp.com/channel/0029Va8LKITFnSzCP6joZv3c" target="_blank">Canal WhatsApp</a>
-      <a href="mailto:voixdesnormaliens@gmail.com">Envoyer un email</a>
+      <a href="/cdn-cgi/l/email-protection#71071e18091514021f1e031c101d18141f0231161c10181d5f121e1c">Envoyer un email</a>
       <a href="tel:+22901464211195">Nous appeler</a>
       <a href="#" onclick="openLogin();return false" style="margin-top:1.2rem;color:rgba(255,255,255,.3)">Espace Admin</a>
     </div>
@@ -952,7 +952,7 @@ footer { background:var(--ink); color:var(--white); padding:3rem 0 0; }
 
 <div class="toast" id="toast"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ================================================================
 // CONFIG
 // ================================================================
@@ -1081,12 +1081,27 @@ async function connectJsonBin(){
 // ================================================================
 async function init(){
   applyLogos(); initDate();
-  const cfg=JSON.parse(localStorage.getItem(CFG_KEY)||'null');
+  // Clé API pré-configurée
+  const PRESET_KEY = '$2a$10$SuhyMSOlsokeVpxGcpWAKeyZA437WDKOE5dcCl1nMfieWg4bGBu/K';
+  let cfg=JSON.parse(localStorage.getItem(CFG_KEY)||'null');
+  // Si pas de config locale, créer automatiquement avec la clé preset
   if(!cfg){
-    document.getElementById('setupScreen').classList.add('show');
-    document.getElementById('statusBar').classList.add('hidden');
-    DB=JSON.parse(JSON.stringify(DEFAULTS));
-    renderAll(); return;
+    setStatus('Initialisation de la base de données...','loading');
+    try{
+      API_KEY=PRESET_KEY;
+      const binId=await jbCreate(PRESET_KEY, JSON.parse(JSON.stringify(DEFAULTS)));
+      cfg={key:PRESET_KEY, binId};
+      localStorage.setItem(CFG_KEY,JSON.stringify(cfg));
+      BIN_ID=binId;
+      DB=JSON.parse(JSON.stringify(DEFAULTS));
+      setStatus('Base de données créée et connectée !','ok');
+      renderAll(); return;
+    }catch(e){
+      // Bin existe peut-être déjà — essayer de lire depuis localStorage ou fallback
+      setStatus('Démarrage en mode local','err');
+      DB=JSON.parse(JSON.stringify(DEFAULTS));
+      renderAll(); return;
+    }
   }
   API_KEY=cfg.key; BIN_ID=cfg.binId;
   setStatus('Connexion à la base de données...','loading');
@@ -1441,19 +1456,4 @@ function closeMenu(){
 // ================================================================
 function v(id){ const el=document.getElementById(id); return el?(el.value||'').trim():''; }
 function set(id,val){ const el=document.getElementById(id); if(el) el.value=val; }
-function setStat(id,n){ const el=document.getElementById(id); if(el) el.textContent=n; }
-function ini2(n){ if(!n)return'??'; return n.split(/[\s-]+/).filter(Boolean).map(w=>w[0]||'').join('').slice(0,2).toUpperCase(); }
-function fmtDate(s){ if(!s)return''; try{return new Date(s).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});}catch(e){return s;} }
-function escH(s){ if(!s)return''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-let toastTimer;
-function toast(msg,type='ok'){
-  const el=document.getElementById('toast');
-  el.textContent=msg; el.className='toast '+type+' show';
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>el.classList.remove('show'),4000);
-}
-
-init();
-</script>
-</body>
-</html>
+function setStat(id,n){
